@@ -1,0 +1,41 @@
+.flex-container {
+  display: flex;
+  flex-direction: column; 
+}
+
+.container1, .container2, .container3 {
+  position: relative;
+  max-width: 100%;
+  margin: 0 auto;
+  margin-bottom: 20px; 
+}
+
+.container1 .content, .container2 .content, .container3 .content {
+  position: absolute;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: #f1f1f1;
+  padding: 20px;
+  width: 100%; 
+  box-sizing: border-box; /* Asegura que el padding se incluya en el ancho total */
+}
+
+.img1, .img2, .img3 {
+  width: 100%;
+  height: auto; 
+}
+
+
+
+@media only screen and (min-width: 768px) {
+  .flex-container {
+    flex-direction: row; 
+    flex-wrap: wrap; 
+    justify-content: space-between; 
+  }
+
+  .container1, .container2, .container3 {
+    width: calc(33.33% - 20px);
+    height: auto; /* Ajusta la altura automáticamente según el contenido */
+  }
+}
